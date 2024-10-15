@@ -59,7 +59,6 @@ function Dashboard() {
 
             <div className="mt-[5rem] overflow-x-auto" >
               <UsersTable />
-
             </div>
 
           </div>
