@@ -40,16 +40,16 @@ function Dashboard() {
                 <h1 className="text-[18px] font-semibold text-[#4C4C4C]" style={{ fontFamily: "Manrope" }}>Account Stats</h1>
                 <div className="flex gap-5 flex-wrap md:flex-nowrap">
                   <div className="grid gap-5 w-full md:w-1/3 rounded rounded-lg p-4" style={{ background: `url(${taskBG}) no-repeat`, backgroundPositionX: "center", backgroundSize: "cover" }}>
-                    <h1 className="text-[24px] font-semibold text-white" style={{ fontFamily: "Manrope" }}>{stats.totalUsers}</h1>
+                    <h1 className="text-[24px] font-semibold text-white" style={{ fontFamily: "Manrope" }}>{stats ? stats.totalUsers : 0}</h1>
                     <p className="text-[12px] font-regular text-white" style={{ fontFamily: "Manrope" }}>Total Users</p>
                   </div>
 
                   <div className="grid gap-5 w-full md:w-1/3 rounded rounded-lg p-4" style={{ background: `url(${taskBG}) no-repeat`, backgroundPositionX: "center", backgroundSize: "cover" }}>
-                    <h1 className="text-[24px] font-semibold text-white" style={{ fontFamily: "Manrope" }}>{stats.totalDeposits}</h1>
+                    <h1 className="text-[24px] font-semibold text-white" style={{ fontFamily: "Manrope" }}>{stats ? stats.totalDeposits : 0}</h1>
                     <p className="text-[12px] font-regular text-white" style={{ fontFamily: "Manrope" }}>Total Deposits</p>
                   </div>
                   <div className="grid gap-5 w-full md:w-1/3 rounded rounded-lg p-4" style={{ background: `url(${taskBG}) no-repeat`, backgroundPositionX: "center", backgroundSize: "cover" }}>
-                    <h1 className="text-[24px] font-semibold text-white" style={{ fontFamily: "Manrope" }}>{stats.totalReferrals}</h1>
+                    <h1 className="text-[24px] font-semibold text-white" style={{ fontFamily: "Manrope" }}>{stats ? stats.totalReferrals : 0}</h1>
                     <p className="text-[12px] font-regular text-white" style={{ fontFamily: "Manrope" }}>Total Withdrawals</p>
                   </div>
                 </div>
