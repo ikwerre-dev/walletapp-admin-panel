@@ -51,7 +51,7 @@ function Dashboard() {
                   <div className="grid gap-5 w-full md:w-1/3 rounded rounded-lg p-4" style={{ background: `url(${taskBG}) no-repeat`, backgroundPositionX: "center", backgroundSize: "cover" }}>
                     <h1 className="text-[24px] font-semibold text-white" style={{ fontFamily: "Manrope" }}>{stats ? stats.totalReferrals : 0}</h1>
                     <p className="text-[12px] font-regular text-white" style={{ fontFamily: "Manrope" }}>Total Withdrawals</p>
-                  </div>
+                    </div> 
                 </div>
               </div>
             </div>
