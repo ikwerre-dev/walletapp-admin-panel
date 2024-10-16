@@ -82,7 +82,17 @@ function Sidebar() {
                                     <span className="flex-1 ms-3 whitespace-nowrap text-[16px]">Withdrawals</span>
                                 </Link>
                             </li>
-                            
+
+                            <li className={`${isActive('/wallets')}`}>
+                                <Link
+                                    to="/wallets"
+                                    className="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-[#66774f] group"
+                                >
+                                    <Ticket color="white" />
+                                    <span className="flex-1 ms-3 whitespace-nowrap text-[16px]">Wallets</span>
+                                </Link>
+                            </li>
+
                         </ul>
                         <ul className="space-y-2 font-medium">
                             <li>

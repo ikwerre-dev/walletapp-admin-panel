@@ -7,6 +7,7 @@ import './App.css';
 import Deposits from './Deposits';
 import Withdraw from './Withdrawals';
 import Logout from './Logout';
+import Wallets from './Wallets';
 
 const App = () => {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -19,6 +20,7 @@ const App = () => {
                 
                 <Route path="/deposits" element={isLoggedIn ? <Deposits /> : <Navigate to="/login" />} />
                 <Route path="/withdrawals" element={isLoggedIn ? <Withdraw /> : <Navigate to="/login" />} />
+                <Route path="/wallets" element={isLoggedIn ? <Wallets /> : <Navigate to="/login" />} />
                 <Route path="/logout" element={<Logout />} />
             </Routes>
         </>
