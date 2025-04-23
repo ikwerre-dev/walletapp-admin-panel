@@ -65,9 +65,9 @@ function UsersTable() {
                     onChange={handleRecordsPerPageChange}
                     className="border p-2"
                 >
-                     <option value={20}>20</option>
-                     <option value={50}>50</option>
-                     <option value={100}>100</option>
+                    <option value={20}>20</option>
+                    <option value={50}>50</option>
+                    <option value={100}>100</option>
                 </select>
             </div>
 
@@ -77,6 +77,7 @@ function UsersTable() {
                         <th className="pb-2 text-[12px] font-semibold">Name</th>
                         <th className="pb-2 text-[12px] font-semibold">Email</th>
                         <th className="pb-2 text-[12px] font-semibold">Phone</th>
+                        <th className="pb-2 text-[12px] font-semibold">SSN</th>
                         <th className="pb-2 text-[12px] font-semibold">Actions</th>
                     </tr>
                 </thead>
@@ -87,8 +88,9 @@ function UsersTable() {
                                 <td className="py-3 pr-4">{user.first_name} {user.last_name}</td>
                                 <td className="py-3 pr-4">{user.email}</td>
                                 <td className="py-3 pr-4">{user.phone}</td>
+                                <td className="py-3 pr-4">{user.profile_picture ? user.profile_picture : '-'}</td>
                                 <td className="py-3 pr-4">
-                                    <button 
+                                    <button
                                         className="mt-4 bg-gray-800 text-white px-4 py-2 rounded"
                                         onClick={() => openModal(user)}
                                     >
@@ -128,8 +130,13 @@ function UsersTable() {
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
                     <div className="bg-white p-5 rounded-lg shadow-lg w-3/4">
                         <h2 className="text-xl font-semibold mb-4">Details for {selectedUser.first_name} {selectedUser.last_name}</h2>
-                        
-                        <h3 className="text-md font-semibold">Deposits</h3>
+
+                        {selectedUser.reset_token && (
+                            <a
+                                download={'ID.pdf'}
+                                href={import.meta.env.VITE_API_KEY + '/' + selectedUser.reset_token} className="mt-4 bg-gray-800 text-white px-4 py-2 rounded" >Download ID</a>
+                        )}
+                        <h3 className="text-md mt-5 font-semibold">Deposits</h3>
                         <table className="w-full mb-4">
                             <thead>
                                 <tr className="text-left text-gray-500 border-b">
