@@ -81,6 +81,7 @@ function DepositsComponent() {
                     <thead>
                         <tr className="text-left text-gray-500 border-b">
                             <th className="pb-2 text-[12px] font-semibold">Email</th>
+                            <th className="pb-2 text-[12px] font-semibold">Type</th>
                             <th className="pb-2 text-[12px] font-semibold">Package</th>
                             <th className="pb-2 text-[12px] font-semibold">Amount</th>
                             <th className="pb-2 text-[12px] font-semibold">Status</th>
@@ -92,6 +93,7 @@ function DepositsComponent() {
                             deposits.map(deposit => (
                                 <tr key={deposit.id} className="border-b last:border-b-0">
                                     <td className="py-3 pr-4">{deposit.user_email}</td>
+                                    <td className="py-3 pr-4">{deposit.type == 1 ? 'Depost' : 'Ref Bonus'}</td>
                                     <td className="py-3 pr-4">{deposit.package_name}</td>
                                     <td className="py-3 pr-4">${deposit.amount}</td>
                                     <td className="py-3 pr-4">{deposit.status === 1 ? "Completed" : "Pending"}</td>
